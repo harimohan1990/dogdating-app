@@ -1,0 +1,85 @@
+// Variables
+$primary-color: #007bff;
+$background-color: #f9f9f9;
+$border-color: #ccc;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+$chat-background-color: #96e36a; // Custom background color for chat component
+
+.chat_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: $chat-background-color; // Apply the custom background color
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px $box-shadow-color;
+
+    li {
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      box-shadow: 0 1px 2px $box-shadow-color;
+    }
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid $border-color;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    padding: 30px;
+
+    ul {
+      padding: 15px;
+    }
+
+    .input-container {
+      margin-top: 15px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .chat_main {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .chat_main {
+      max-width: 992px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.account-setting-container {
+    padding: 20px;
+    
+    .header {
+      display: flex;
+      align-items: center;
+      
+      .back-icon {
+        margin-right: 10px;
+      }
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        
+        &:focus {
+          border-color: #007bff;
+        }
+      }
+    }
+    
+    .save-button {
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+  

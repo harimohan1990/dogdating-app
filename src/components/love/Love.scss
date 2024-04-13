@@ -1,0 +1,51 @@
+.Profile_love{
+   
+    height:90vh;
+    padding-top:40px;
+    width:100%;
+    overflow: scroll;
+
+    p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .profile_like{
+        text-align: center;
+
+    }
+    .profile_liked_list{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+    
+       .profile_likeditem{
+        width: 36%;
+       
+          
+        img{
+            width:170px;
+        }
+       }
+}
+.profile_liked-who{
+    margin: 12px auto;
+    text-align: center;
+
+    button{
+        padding:12px 12px;
+        border-radius: 10%;
+        border:none;
+    }
+    button:hover{
+        font-size: 18px;
+        color:green;
+       cursor: pointer;
+    }
+}
+
+
+}

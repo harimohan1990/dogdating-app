@@ -1,0 +1,115 @@
+.plan-setting-container {
+    padding: 20px;
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .back-icon {
+        margin-right: 10px;
+      }
+    }
+    
+    .current-plan {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      
+      .plan-details {
+        margin-bottom: 10px;
+        
+        span {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+      }
+      
+      .buttons {
+        button {
+          margin-right: 10px;
+          padding: 5px 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          
+          &.unsubscribe {
+            background-color: #dc3545;
+            color: white;
+            
+            &:hover {
+              background-color: #bd2130;
+            }
+          }
+          
+          &.upgrade {
+            background-color: #007bff;
+            color: white;
+            
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+        }
+      }
+    }
+    
+    .get-gold-plan {
+      margin-top: 20px;
+      text-align: center;
+      
+      .plan-details {
+        h1 {
+          margin-bottom: 10px;
+        }
+        
+        h2 {
+          margin-top: 0;
+        }
+        
+        p {
+          margin-bottom: 20px;
+        }
+      }
+      
+      .plans {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-direction: column;
+        
+        div {
+          flex: 0 0 48%;
+          border: 1px solid #ccc;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          
+          span {
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      
+      .continue-button {
+        button {
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+  

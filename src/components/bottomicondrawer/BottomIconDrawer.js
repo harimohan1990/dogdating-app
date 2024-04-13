@@ -1,4 +1,3 @@
-// BottomIconDrawer.js
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,11 +12,17 @@ import Profile from "../profile/Profile";
 import Chat from "../chat/Chat";
 import Home from "../home/Home";
 import Love from "../love/Love";
+import { Link } from "react-router-dom";
+
 export default function BottomIconDrawer() {
-  const [activeComponent, setActiveComponent] = useState("home");
+  const [active, setActive] = useState("home");
+
+  const handleClick = (route) => {
+    setActive(route);
+  };
 
   const renderComponent = () => {
-    switch (activeComponent) {
+    switch (active) {
       case "home":
         return <Home />;
       case "love":
@@ -33,26 +38,31 @@ export default function BottomIconDrawer() {
 
   return (
     <div className="bottom-drawer">
-      <div className="content">{renderComponent()}</div>
-      <nav>
-        <ul>
-          <li onClick={() => setActiveComponent("home")}>
-            {" "}
-            <FontAwesomeIcon icon={faHome} className="icon" />
-          </li>
-          <li onClick={() => setActiveComponent("love")}>
-            <FontAwesomeIcon icon={faHeart} className="icon" />
-          </li>
-          <li onClick={() => setActiveComponent("chat")}>
-            {" "}
-            <FontAwesomeIcon icon={faComment} className="icon" />
-          </li>
-          <li onClick={() => setActiveComponent("profile")}>
-            {" "}
-            <FontAwesomeIcon icon={faUser} className="icon" />
-          </li>
-        </ul>
-      </nav>
+      <div className="Bottom_activecomponent">
+        {renderComponent()}
+      </div>
+      <div className="bottom_drawerlist">
+        <div onClick={() => handleClick("home")}>
+          <Link to="/home">
+            <FontAwesomeIcon icon={faHome} />
+          </Link>
+        </div>
+        <div onClick={() => handleClick("love")}>
+          <Link to="/love">
+            <FontAwesomeIcon icon={faHeart} />
+          </Link>
+        </div>
+        <div onClick={() => handleClick("chat")}>
+          <Link to="/chat">
+            <FontAwesomeIcon icon={faComment} />
+          </Link>
+        </div>
+        <div onClick={() => handleClick("profile")}>
+          <Link to="/profile">
+            <FontAwesomeIcon icon={faUser} />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
