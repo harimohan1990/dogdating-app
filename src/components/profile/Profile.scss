@@ -1,0 +1,122 @@
+.profile-container {
+    display: flex;
+  
+    .sidebar {
+      width: 250px;
+      background-color: #f4f4f4;
+      transition: transform 0.3s ease;
+      transform: translateX(-250px);
+      height: 100%; /* Set sidebar height to 100% */
+  
+      &.open {
+        transform: translateX(0);
+      }
+  
+      .sidebar-content {
+        padding: 20px;
+        height: 100vh;
+  
+        h3 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+  
+      .sidebar-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        cursor: pointer;
+        border-top: 1px solid #ddd;
+  
+        svg {
+          font-size: 24px;
+          color: #555;
+        }
+      }
+    }
+  
+    .main-content {
+      flex: 1;
+      padding: 20px;
+  
+      .dog-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+  
+        .dog-card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: transform 0.3s ease;
+  
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+  
+          .dog-description {
+            padding: 10px;
+  
+            h3 {
+              font-size: 16px;
+              margin-bottom: 5px;
+            }
+  
+            p {
+              font-size: 14px;
+              line-height: 1.3;
+            }
+          }
+        }
+      }
+  
+      .main-content-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #007bff;
+        border-radius: 50%;
+        cursor: pointer;
+  
+        svg {
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+    }
+  
+    // Media queries for responsiveness
+  
+    @media (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
+  
+        .sidebar {
+          width: 100%;
+          transform: translateX(0);
+        }
+      }
+    }
+  
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .sidebar {
+        width: 200px;
+      }
+    }
+  }
+  

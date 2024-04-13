@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "components/profile"
+		},
+		{
+			"path": "../node_modules"
+		}
+	],
+	"settings": {}
+}
